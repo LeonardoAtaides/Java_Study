@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JAVA FACUL.iml" filepath="$PROJECT_DIR$/JAVA FACUL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA.iml" filepath="$PROJECT_DIR$/JAVA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/POO CAR/POO CAR.iml" filepath="$PROJECT_DIR$/POO CAR/POO CAR.iml" />
     </modules>
   </component>
 </project>
