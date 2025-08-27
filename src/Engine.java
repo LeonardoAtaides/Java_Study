@@ -1,4 +1,4 @@
 public class Engine {
-    String Fuel_Type;
+    String fuel_Type;
     int power;
 }
