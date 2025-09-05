@@ -6,7 +6,7 @@ public class Livro {
     private Autor autor;
 
     public Livro ( Autor autor){
-        this.autor = autor;
+    this.autor = autor;
     }
 
     Livro(){

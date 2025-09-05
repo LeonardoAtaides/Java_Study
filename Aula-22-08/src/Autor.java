@@ -10,12 +10,24 @@ public class Autor {
         System.out.println("CPF: " + CPFAutor);
     }
 
+    public String getNomeAutor() {
+        return nomeAutor;
+    }
+
     public void setNomeAutor(String nomeAutor) {
         this.nomeAutor = nomeAutor;
     }
 
+    public String getEmailAutor() {
+        return emailAutor;
+    }
+
     public void setEmailAutor(String emailAutor) {
         this.emailAutor = emailAutor;
+    }
+
+    public String getCPFAutor() {
+        return CPFAutor;
     }
 
     public void setCPFAutor(String CPFAutor) {
