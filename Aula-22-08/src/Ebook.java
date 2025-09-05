@@ -5,6 +5,16 @@ public class Ebook  extends  Livro{
         super(autor);
     }
 
+    @Override
+    public boolean aplicarDescontoDe(double porcentagem){
+        if(porcentagem > 15){
+            System.out.println("Desconto não pode ser maior que 15%");
+            return false;
+        }
+
+        return super.aplicarDescontoDe(porcentagem);
+    }
+
     public String getWatermark() {
         return watermark;
     }

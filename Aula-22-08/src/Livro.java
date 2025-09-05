@@ -32,12 +32,13 @@ public class Livro {
         return autor != null;
     }
 
-    void aplicarDescontoDe(double porcentagem){
+    public boolean aplicarDescontoDe(double porcentagem){
         if(porcentagem > 20){
             System.out.println("Desconto não pode ser maior que 20%");
-            return;
+            return false;
         }
         valor -= valor * porcentagem / 100;
+        return true;
     }
 
     public void setNome(String nome) {
