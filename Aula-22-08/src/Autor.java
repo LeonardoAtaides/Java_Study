@@ -10,6 +10,7 @@ public class Autor {
         System.out.println("CPF: " + CPFAutor);
     }
 
+
     public String getNomeAutor() {
         return nomeAutor;
     }

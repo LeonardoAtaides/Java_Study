@@ -5,13 +5,16 @@ public class Livro {
     private String isbn;
     private Autor autor;
 
+
+    public Livro ( Autor autor){
+        this.autor = autor;
+    }
+
     Livro(){
         System.out.println("Livro Criado");
     }
 
     void mostrarDetalhes(){
-        String mensagem = "Detalhes do livro: ";
-        System.out.println(mensagem);
         System.out.println("Nome: " + nome);
         System.out.println("Descricao: " + descricao);
         System.out.println("Valor: " + valor);
@@ -27,7 +30,6 @@ public class Livro {
     }
 
 
-
     boolean temAutor(){
         return autor != null;
     }
@@ -41,17 +43,6 @@ public class Livro {
         valor -= valor * porcentagem / 100;
     }
 
-    /*void setValor(double valor){
-        this.valor += valor;
-    }
-
-    double getValor(){
-        return valor;
-    }*/
-
-    public String getNome() {
-        return nome;
-    }
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -73,9 +64,6 @@ public class Livro {
         this.valor = valor;
     }
 
-    public String getIsbn() {
-        return isbn;
-    }
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
