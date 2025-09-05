@@ -5,7 +5,6 @@ public class Livro {
     private String isbn;
     private Autor autor;
 
-
     public Livro ( Autor autor){
         this.autor = autor;
     }
@@ -29,11 +28,9 @@ public class Livro {
         System.out.println("-----------");
     }
 
-
     boolean temAutor(){
         return autor != null;
     }
-
 
     void aplicarDescontoDe(double porcentagem){
         if(porcentagem > 20){
@@ -42,7 +39,6 @@ public class Livro {
         }
         valor -= valor * porcentagem / 100;
     }
-
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -63,7 +59,6 @@ public class Livro {
     public void setValor(double valor) {
         this.valor = valor;
     }
-
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
