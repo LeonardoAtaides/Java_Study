@@ -26,6 +26,16 @@ public class LivroFisico extends Livro {
         System.out.println("---------");
     }
 
+    @Override
+    public boolean aplicarDescontoDe(double porcentagem){
+        if(porcentagem > 10){
+            System.out.println("Desconto não pode ser maior que 10%");
+            return false;
+        }
+
+        return super.aplicarDescontoDe(porcentagem);
+    }
+
     public double getTaxadeImpressao() {
         return this.getValor() * 5 /100;
     }

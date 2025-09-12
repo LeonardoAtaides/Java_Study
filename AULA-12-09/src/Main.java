@@ -5,12 +5,16 @@ public class Main {
         Ebook ebook = new Ebook(autor);
 
         ebook.setNome("Herança em Java");
-        ebook.mostrarDetalhes();
+
 
         LivroFisico livrofisico = new LivroFisico(autor);
         livrofisico.setNome("TESTE");
-        livrofisico.setValor(50);
-        livrofisico.mostrarDetalhes();
+        livrofisico.setValor(400);
+
+        CarrinhodeCompras carrinhodeCompras = new CarrinhodeCompras();
+        carrinhodeCompras.adicionarLivro(livrofisico);
+        carrinhodeCompras.adicionarLivro(ebook);
+
 
     }
 }
