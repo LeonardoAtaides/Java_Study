@@ -72,4 +72,12 @@ public class Livro {
     public void setAutor(Autor autor) {
         this.autor = autor;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
 }

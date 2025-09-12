@@ -6,5 +6,11 @@ public class Main {
 
         ebook.setNome("Herança em Java");
         ebook.mostrarDetalhes();
+
+        LivroFisico livrofisico = new LivroFisico(autor);
+        livrofisico.setNome("TESTE");
+        livrofisico.setValor(50);
+        livrofisico.mostrarDetalhes();
+
     }
 }
