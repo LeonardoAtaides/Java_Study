@@ -6,6 +6,7 @@ public class Pessoa {
 
     void calcularImc(){
         imc = this.peso / (this.altura * this.altura);
+        System.out.println(String.format("O seu IMC é: %.2f", imc));
     }
 
 }
