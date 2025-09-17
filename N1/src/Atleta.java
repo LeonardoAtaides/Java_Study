@@ -1,5 +1,12 @@
 public class Atleta extends Pessoa{
-    String esportePraticado;
+   private String esportePraticado;
 
 
+    public String getEsportePraticado() {
+        return esportePraticado;
+    }
+
+    public void setEsportePraticado(String esportePraticado) {
+        this.esportePraticado = esportePraticado;
+    }
 }
