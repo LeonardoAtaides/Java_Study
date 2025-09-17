@@ -17,8 +17,6 @@ public class Atleta extends Pessoa{
        System.out.print("\t(reduzido em 5% pelo porte atlético!)");
    }
 
-
-
     public String getEsportePraticado() {
         return esportePraticado;
     }
