@@ -8,7 +8,7 @@ public class LivroFisico extends Livro {
 
     @Override
      public void mostrarDetalhes(){
-        String mensagem = "Detalhes fdo Livro:";
+        String mensagem = "Detalhes do Livro:";
         System.out.println(mensagem);
 
         System.out.println("Nome: " + this.getNome());

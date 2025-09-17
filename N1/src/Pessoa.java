@@ -4,9 +4,17 @@ public class Pessoa {
     private float altura;
     float imc;
 
+    void mostrarDados(){
+        System.out.println("-- Pessoa Comum --");
+        System.out.println("Nome: " + nome);
+        System.out.println("Peso: " + peso);
+        System.out.println("Altura: " + altura);
+    }
+
     void calcularImc(){
         imc = this.peso / (this.altura * this.altura);
-        System.out.println(String.format("O seu IMC é: %.2f", imc));
+        System.out.println(String.format("IMC: %.2f", imc));
+        System.out.println("\n");
     }
 
     public float getAltura() {

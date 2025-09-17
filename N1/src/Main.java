@@ -11,22 +11,16 @@ public class Main {
         p1.setPeso(68.0f);
 
 
-        System.out.println(p1.getNome());
-        System.out.println(p1.getAltura());
-        System.out.println(p1.getPeso());
+        p1.mostrarDados();
         p1.calcularImc();
 
-        System.out.println("--------");
-
         p2.setNome("Ataídes");
-        p2.setAltura(1.80f);
-        p2.setPeso(75.0f);
-        p2.setEsportePraticado("Vôlei");
+        p2.setAltura(1.70f);
+        p2.setPeso(68.0f);
+        p2.setEsportePraticado("Futebol");
 
-        System.out.println(p2.getNome());
-        System.out.println(p2.getAltura());
-        System.out.println(p2.getPeso());
-        System.out.println(p2.getEsportePraticado());
+
+        p2.mostrarDados();
         p2.calcularImc();
 
     }
