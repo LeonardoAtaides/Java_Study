@@ -20,7 +20,5 @@ public class Main {
         p2.setEsportePraticado("Futebol");
         p2.mostrarDados();
         p2.calcularImc();
-
-
     }
 }
