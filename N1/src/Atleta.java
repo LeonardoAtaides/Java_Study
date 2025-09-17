@@ -3,10 +3,7 @@ public class Atleta extends Pessoa{
 
     @Override
     void mostrarDados(){
-        System.out.println("-- Atleta --");
-        System.out.println("Nome: " + this.getNome());
-        System.out.println("Peso: " + this.getPeso());
-        System.out.println("Altura: " + this.getAltura());
+        super.mostrarDados();
         System.out.println("Esporte:" + esportePraticado);
     }
 
