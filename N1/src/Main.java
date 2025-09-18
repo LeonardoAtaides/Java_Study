@@ -13,7 +13,6 @@ public class Main {
         p1.calcularImc();
         p1.mostrarDados();
 
-
         // ATLETA
         System.out.println("-- Atleta --");
         p2.setNome("Ataídes");
