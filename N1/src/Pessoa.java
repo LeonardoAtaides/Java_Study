@@ -2,18 +2,18 @@ public class Pessoa {
     private String nome;
     private float peso;
     private float altura;
-    float imc;
+    private float imc;
 
     void mostrarDados(){
         System.out.println("Nome: " + nome);
         System.out.println("Peso: " + peso);
         System.out.println("Altura: " + altura);
+        System.out.println(String.format("IMC: %.2f", imc));
     }
 
-    void calcularImc(){
+    public float calcularImc(){
         imc = this.peso / (this.altura * this.altura);
-        System.out.println(String.format("IMC: %.2f", imc));
-        System.out.println("\n");
+        return imc;
     }
 
     public float getAltura() {
@@ -46,5 +46,13 @@ public class Pessoa {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public float getImc() {
+        return imc;
+    }
+
+    public void setImc(float imc) {
+        this.imc = imc;
     }
 }
