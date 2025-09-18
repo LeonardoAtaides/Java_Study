@@ -8,7 +8,7 @@ public class Pessoa {
         System.out.println("Nome: " + nome);
         System.out.println("Peso: " + peso);
         System.out.println("Altura: " + altura);
-        System.out.println(String.format("IMC: %.2f", imc));
+        System.out.printf("IMC: %.2f%n", imc);
     }
 
     public float calcularImc(){
