@@ -8,7 +8,7 @@ public class Pessoa {
         System.out.println("Nome: " + nome);
         System.out.println("Peso: " + peso);
         System.out.println("Altura: " + altura);
-        System.out.printf("IMC: %.2f%n\n", imc);
+        System.out.printf("IMC: %.2f%n", imc);
     }
 
     public float calcularImc(){
@@ -16,7 +16,7 @@ public class Pessoa {
             imc = this.peso / (this.altura * this.altura);
             return imc;
         }else{
-            System.out.println("Não foi possível calcular IMC\n");
+            System.out.println("Não foi possível calcular IMC");
             return 0;
         }
     }

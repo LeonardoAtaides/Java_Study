@@ -14,7 +14,7 @@ public class Main {
         p1.mostrarDados();
 
         // ATLETA
-        System.out.println("-- Atleta --");
+        System.out.println("\n-- Atleta --");
         p2.setNome("Ataídes");
         p2.setAltura(1.70f);
         p2.setPeso(68.0f);
