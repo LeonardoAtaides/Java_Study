@@ -12,7 +12,11 @@ public class Pessoa {
     }
 
     public float calcularImc(){
-        imc = this.peso / (this.altura * this.altura);
+        if(peso > 0 && altura > 0){
+            imc = this.peso / (this.altura * this.altura);
+        }else{
+            System.out.println("Não foi possível calcular IMC\n");
+        }
         return imc;
     }
 
@@ -36,7 +40,7 @@ public class Pessoa {
         if(peso > 0){
             this.peso = peso;
         }else {
-            System.out.println("Peso inválido! \n");
+            System.out.println("Peso inválido!");
         }
     }
 

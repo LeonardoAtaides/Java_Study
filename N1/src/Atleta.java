@@ -9,7 +9,12 @@ public class Atleta extends Pessoa{
 
    @Override
    public float calcularImc(){
-       this.setImc(this.getPeso() / (this.getAltura() * this.getAltura()));
+        if (this.getPeso() > 0 && this.getAltura() > 0){
+            this.setImc(this.getPeso() / (this.getAltura() * this.getAltura()) * 0.95f);
+            System.out.println("IMC reduzido em 5% pelo porte atlético");
+        }else {
+            System.out.println("Não foi possível calcular IMC\n");
+        }
        return getImc();
    }
 
