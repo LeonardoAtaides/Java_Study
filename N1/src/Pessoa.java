@@ -14,10 +14,11 @@ public class Pessoa {
     public float calcularImc(){
         if(peso > 0 && altura > 0){
             imc = this.peso / (this.altura * this.altura);
+            return imc;
         }else{
             System.out.println("Não foi possível calcular IMC\n");
+            return 0;
         }
-        return imc;
     }
 
     public float getAltura() {
