@@ -3,6 +3,7 @@ public class Main {
 
         Pessoa p1 = new Pessoa();
         Atleta p2 = new Atleta();
+        Pessoa p3 = new Pessoa();
 
         // PESSOA COMUM
         System.out.println("-- Pessoa Comum --");
@@ -22,6 +23,15 @@ public class Main {
 
         p2.calcularImc();
         p2.mostrarDados();
+
+        // PESSOA COMUM
+        System.out.println("\n-- Pessoa Comum --");
+        p3.setNome("Maria");
+        p3.setAltura(0.00f);
+        p3.setPeso(00.0f);
+
+        p3.calcularImc();
+        p3.mostrarDados();
 
     }
 }
