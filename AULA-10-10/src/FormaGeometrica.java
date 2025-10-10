@@ -5,9 +5,17 @@ public abstract class FormaGeometrica {
         this.cor = cor;
     }
 
-    public void exibirCor(String cor){
-        System.out.println("A cor da forma e: "+ cor);
+    public void exibirCor(){
+        System.out.println("A cor da forma e: "+ getCor());
     }
+
+    public abstract double calcularArea();
+
+    public void exibirDetalhes(){
+        System.out.println("A cor da forma é: "+ cor);
+        System.out.println(calcularArea());
+    }
+
 
     public String getCor() {
         return cor;
