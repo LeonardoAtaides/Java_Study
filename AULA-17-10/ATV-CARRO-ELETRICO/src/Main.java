@@ -20,7 +20,7 @@ Na classe teste veiculo- (MAIN) crie um objeto CarroEltrico, chame o metodo via 
 public class Main {
     public static void main(String[] args) {
 
-    CarroEletrico carro = new CarroEletrico("BYD", "Park Way", 31);
+    CarroEletrico carro = new CarroEletrico("BYD", "Park Way", 30);
         carro.dirigirautonomo();
         carro.regarregar();
 

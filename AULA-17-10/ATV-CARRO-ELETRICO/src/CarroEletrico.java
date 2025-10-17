@@ -17,7 +17,7 @@ public class CarroEletrico  implements  Autonomo, Recarregavel{
 
     @Override
     public void regarregar() {
-        if (TEMPO_MAXIMO < 30 ){
+        if (minutos <=  TEMPO_MAXIMO){
             System.out.println("O " + modelo + " está regarregando por " + minutos + " minutos");
         }else{
             System.out.println("Tempo não aceito!");
