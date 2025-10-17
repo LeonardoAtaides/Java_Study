@@ -1,15 +1,15 @@
 /*
-Enunciado: Desafio Veiulos Eletrico
+Enunciado: Desafio Veiculos Elétrico
 
-crie duas interfaces
-1- recarregável{
-    -metodo abstrato *regarregar*, que recebe parametros (int, tempo minutos),imprima "algo como regarregando por X minutos"
-            - constante int TEMPO_MAXIMO = 30
+Crie duas interfaces
+1- Recarregavel{
+- Método abstrato *regarregar*, que recebe paramêtros (int, tempo minutos),imprima "algo como regarregando por X minutos"
+- Constante int TEMPO_MAXIMO = 30
 }
 
 2- Autonomo {
-    - metodo abstrato *dirigirautonomo* , que recebe como paremetro como (string, destino), imprimindo "dirigindo autononamente para o destino"
-    constante boolean SUPORTE_GPS = TRUE
+- Método abstrato *dirigirautonomo* , que recebe como paremetro como (string, destino), imprimindo "dirigindo autononamente para o destino"
+- Constante boolean SUPORTE_GPS = TRUE
 }
 
 Crie uma classe carro eletrico que implemente ambas as interfaces, adicione o atributo string MODELO no construtor, nas implementações use o modelo - Ex: "O modelo X está regarregando"
