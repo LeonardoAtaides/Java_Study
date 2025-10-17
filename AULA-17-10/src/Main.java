@@ -11,6 +11,8 @@ public class Main {
         Voavel voavel = new Passaro("Mabel");
         voavel.voar();
 
+        System.out.println("--------------------------------------------");
+
         Pato pato = new Pato("Quaqua");
         pato.nadar();
         pato.voar();
