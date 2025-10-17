@@ -1,17 +1,15 @@
-public class Animal {
+public abstract class Animal {
     protected String nome;
-
 
     public Animal(String nome){
         this.nome = nome;
     }
 
-    void AnimalDormir(){
-        System.out.println("O " + getNome() + "está dormindo!");
+    public void dormindo(){
+        System.out.println( getNome() + " está dormindo!");
     }
 
-    public abstract String FazerSom();
-
+    public abstract void fazerSom();
 
     public String getNome() {
         return nome;
