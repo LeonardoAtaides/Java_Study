@@ -6,5 +6,14 @@ public class Main {
         Passaro passaro = new Passaro("Passareco");
         passaro.voar();
 
+        System.out.println("--------------------------------------------");
+
+        Voavel voavel = new Passaro("Mabel");
+        voavel.voar();
+
+        Pato pato = new Pato("Quaqua");
+        pato.nadar();
+        pato.voar();
+
     }
 }
