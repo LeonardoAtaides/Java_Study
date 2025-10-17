@@ -13,10 +13,16 @@ Crie duas interfaces
 }
 
 Crie uma classe carro eletrico que implemente ambas as interfaces, adicione o atributo string MODELO no construtor, nas implementações use o modelo - Ex: "O modelo X está regarregando"
-Na classe teste veiculo- (MAIN) crie um objeto CarroEltrico, chame o metodo via referencias das interfaces (polimorfismo) e use as constantes*/
+Na classe teste veiculo- (MAIN) crie um objeto CarroEltrico, chame o metodo via referencias das interfaces (polimorfismo) e use as constantes
+
+*/
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("oi");
+
+    CarroEletrico carro = new CarroEletrico("BYD", "Park Way", 31);
+        carro.dirigirautonomo();
+        carro.regarregar();
+
         }
     }
