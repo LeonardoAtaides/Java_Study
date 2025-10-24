@@ -23,6 +23,29 @@
 
     }*/
 
+public interface PaymentMethod{
+    void send(double amount);
+}
+class GreenCardPayment{
+
+}
+
+class PayPayPagament{
+
+}
+
+class EmailService{
+
+}
+
+class PaygamentProcessor{
+
+}
+
+
+
+
+
 class PaymentProcessor{
     public void processPayment(String type, double amount ){
         if (type.equals("credit_card")){
