@@ -23,30 +23,30 @@
 
     }*/
 
-public interface PaymentMethod{
-    void send(double amount);
-}
-class GreenCardPayment{
+    public interface PaymentMethod{
+        void process(double amount);
+    }
 
-}
+    class CreditCardPayment{
 
-class PayPayPagament{
+    }
 
-}
+    class PayPalPagament{
 
-class EmailService{
+    }
 
-}
+    class EmailService{
 
-class PaygamentProcessor{
+    }
 
-}
+    class PayamentProcessor{
 
-
-
+    }
 
 
-class PaymentProcessor{
+
+
+/*class PaymentProcessor{
     public void processPayment(String type, double amount ){
         if (type.equals("credit_card")){
             System.out.println("Processing credit card payment of $" + amount);
@@ -58,8 +58,7 @@ class PaymentProcessor{
     public void sendConfirmationEmail(String type, double amount){
         System.out.println("Email sent confirming" + type + "payment of $" + amount);
     }
-
-}
+}*/
 
 
 
