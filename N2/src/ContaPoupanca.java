@@ -4,20 +4,10 @@ public class ContaPoupanca extends Conta{
     }
 
     @Override
-    public void sacar(double valor) throws SaldoExcecao {
-        double taxaOp = valor * 0.003;
-        double saldoFinal = valor + taxaOp;
-
-        if (saldoFinal > getSaldo()) {
-            throw new SaldoExcecao("Não foi possível sacar, sem saldo suficiente!");
-        }else {
-            System.out.println("taxa de operação: " + saldoFinal );
-            setSaldo(getSaldo() - saldoFinal );
-        }
-    }
-
-    @Override
     public void atualizarSaldo() {
+        double rendimentoMensal = getSaldo() * 0.003;
+        setSaldo(getSaldo() + rendimentoMensal);
+        System.out.println("Rendimento Mensal: " + rendimentoMensal );
         System.out.println("Saldo atual: " + getSaldo());
     }
 }

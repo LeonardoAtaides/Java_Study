@@ -10,9 +10,10 @@ public abstract class Conta {
     }
 
     public void depositar(double valor){
+        System.out.println("Depositando...");
         if (valor > 0){
             setSaldo( getSaldo() + valor);
-            System.out.println("R$"+ getSaldo() + " depositado com sucesso!");
+            System.out.printf("R$%.2f depositado com sucesso!%n", getSaldo());
 
         }else {
             System.out.println("Não e possivel depositar valor negativo!");
@@ -21,6 +22,7 @@ public abstract class Conta {
 
 
     public void sacar(double valor) throws SaldoExcecao {
+        System.out.println("Sacando...");
         if (valor > getSaldo()) {
             throw new SaldoExcecao("Não foi possível sacar, sem saldo suficiente!");
         }else {
