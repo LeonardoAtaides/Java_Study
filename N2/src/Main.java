@@ -5,15 +5,21 @@ public class Main {
 
 
         teste.depositar(1200);
-        teste.transferir(teste2,200);
+
         try {
             teste.sacar(10);
 
-        } catch (SaldoExcecao e) {
+        } catch (SaldoInsuficienteException e) {
             System.out.println(e.getMessage());
         }
 
+        try {
+            teste.transferir(teste2, 1500);
 
-    teste.imprimirExtrato();
+        } catch (SaldoInsuficienteException e) {
+            System.out.println(e.getMessage());
+        }
+
+        teste.imprimirExtrato();
     }
     }

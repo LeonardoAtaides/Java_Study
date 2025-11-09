@@ -5,13 +5,13 @@ public class ContaCorrente extends Conta implements OperacoesBancarias{
     }
 
     @Override
-    public void sacar(double valor) throws SaldoExcecao {
+    public void sacar(double valor) throws SaldoInsuficienteException {
         double taxaOp = valor * 0.005;
         double saldoFinal = valor + taxaOp;
 
         System.out.println("Sacando...");
         if (saldoFinal > getSaldo()) {
-            throw new SaldoExcecao("Não foi possível sacar, sem saldo suficiente!");
+            throw new SaldoInsuficienteException("Não foi possível sacar, sem saldo suficiente!");
         }else {
             System.out.println("taxa de operação: " + saldoFinal );
             setSaldo(getSaldo() - saldoFinal );
@@ -24,12 +24,12 @@ public class ContaCorrente extends Conta implements OperacoesBancarias{
     }
 
     @Override
-    public void transferir(Conta destino, double valor){
+    public void transferir (Conta destino, double valor) throws SaldoInsuficienteException{
         if (valor <= getSaldo()){
             setSaldo(getSaldo() - valor);
             System.out.printf("R$%.2f Transfêrido com sucesso%n", valor);
         }else {
-            System.out.println("Saldo insuficiente para realizar a transfência!");
+            throw new SaldoInsuficienteException("Não foi possível transfência, sem saldo suficiente!");
         }
     }
 

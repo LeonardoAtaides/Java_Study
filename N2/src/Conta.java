@@ -19,9 +19,9 @@ public abstract class Conta {
     }
 
 
-    public void sacar(double valor) throws SaldoExcecao {
+    public void sacar(double valor) throws SaldoInsuficienteException {
         if (valor > getSaldo()) {
-            throw new SaldoExcecao("Não foi possível sacar, sem saldo suficiente!");
+            throw new SaldoInsuficienteException("Não foi possível sacar, sem saldo suficiente!");
         }else {
             setSaldo( getSaldo() - valor);
         }

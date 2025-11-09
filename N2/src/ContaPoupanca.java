@@ -12,12 +12,12 @@ public class ContaPoupanca extends Conta implements OperacoesBancarias{
     }
 
     @Override
-    public void transferir(Conta destino, double valor){
+    public void transferir (Conta destino, double valor) throws SaldoInsuficienteException{
         if (valor <= getSaldo()){
             setSaldo(getSaldo() - valor);
             System.out.printf("R$%.2f Transfêrido com sucesso%n", valor);
         }else {
-            System.out.println("Saldo insuficiente para realizar a transfência!");
+            throw new SaldoInsuficienteException("Não foi possível transfência, sem saldo suficiente!");
         }
     }
 
