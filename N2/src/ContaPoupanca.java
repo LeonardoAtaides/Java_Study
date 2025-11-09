@@ -7,27 +7,28 @@ public class ContaPoupanca extends Conta implements OperacoesBancarias{
     public void atualizarSaldo() {
         double rendimentoMensal = getSaldo() * 0.003;
         setSaldo(getSaldo() + rendimentoMensal);
-        System.out.println("Rendimento Mensal: " + rendimentoMensal );
-        System.out.println("Saldo atual: " + getSaldo());
+        System.out.printf("Rendimento Mensal: R$%.2f%n", rendimentoMensal );
+        System.out.printf("Saldo atual: R$%.2f%n", getSaldo());
     }
 
     @Override
     public void transferir (Conta destino, double valor) throws SaldoInsuficienteException{
         if (valor <= getSaldo()){
             setSaldo(getSaldo() - valor);
-            System.out.printf("R$%.2f Transfêrido com sucesso%n", valor);
+            System.out.printf("Transfência de R$%.2f realizado com sucesso!%n", valor);
         }else {
-            throw new SaldoInsuficienteException("Não foi possível transfência, sem saldo suficiente!");
+            throw new SaldoInsuficienteException("Não foi possível realizar a transfência, sem saldo suficiente!");
         }
     }
 
     @Override
     public void imprimirExtrato() {
-        System.out.println("\n------ Extrato Conta Poupança ------");
-        System.out.println("Titular da Conta: " + getTitular());
+        System.out.println("\n---------- Extrato ----------");
+        System.out.println("Tipo de Conta: Poupança (CP) ");
+        System.out.println("Titular: " + getTitular());
         System.out.println("Numéro: " + getNumero());
-        System.out.println("Saldo Disponível: " + getSaldo());
-        System.out.println("-------------------------------------\n");
+        System.out.printf("Saldo Disponível: R$%.2f%n", getSaldo());
+        System.out.println("-----------------------------\n");
     }
 
 

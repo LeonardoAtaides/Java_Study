@@ -12,7 +12,7 @@ public abstract class Conta {
     public void depositar(double valor){
         if (valor > 0){
             setSaldo( getSaldo() + valor);
-            System.out.printf("R$%.2f depositado com sucesso!%n", getSaldo());
+            System.out.printf("Deposito de R$%.2f realizado com sucesso!%n", getSaldo());
         }else {
             System.out.println("Não e possivel depositar valor negativo!");
         }
@@ -23,6 +23,7 @@ public abstract class Conta {
         if (valor > getSaldo()) {
             throw new SaldoInsuficienteException("Não foi possível sacar, sem saldo suficiente!");
         }else {
+            System.out.printf("Saque de R$%.2f realizado com sucesso!%n", valor);
             setSaldo( getSaldo() - valor);
         }
     }

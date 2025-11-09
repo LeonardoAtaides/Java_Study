@@ -9,11 +9,10 @@ public class ContaCorrente extends Conta implements OperacoesBancarias{
         double taxaOp = valor * 0.005;
         double saldoFinal = valor + taxaOp;
 
-        System.out.println("Sacando...");
         if (saldoFinal > getSaldo()) {
             throw new SaldoInsuficienteException("Não foi possível sacar, sem saldo suficiente!");
         }else {
-            System.out.println("taxa de operação: " + saldoFinal );
+            System.out.printf("Saque de R$%.2f realizado com sucesso!%n", valor);
             setSaldo(getSaldo() - saldoFinal );
         }
     }
@@ -27,18 +26,19 @@ public class ContaCorrente extends Conta implements OperacoesBancarias{
     public void transferir (Conta destino, double valor) throws SaldoInsuficienteException{
         if (valor <= getSaldo()){
             setSaldo(getSaldo() - valor);
-            System.out.printf("R$%.2f Transfêrido com sucesso%n", valor);
+            System.out.printf("Transfência de R$%.2f realizado com sucesso!%n", valor);
         }else {
-            throw new SaldoInsuficienteException("Não foi possível transfência, sem saldo suficiente!");
+            throw new SaldoInsuficienteException("Não foi possível realizar a transfência, sem saldo suficiente!");
         }
     }
 
     @Override
     public void imprimirExtrato() {
-        System.out.println("\n------ Extrato Conta Corrente ------");
-        System.out.println("Titular da Conta: " + getTitular());
+        System.out.println("\n---------- Extrato ----------");
+        System.out.println("Tipo de Conta: Corrente (CC) ");
+        System.out.println("Titular: " + getTitular());
         System.out.println("Numéro: " + getNumero());
-        System.out.println("Saldo Disponível: " + getSaldo());
-        System.out.println("-------------------------------------\n");
+        System.out.printf("Saldo Disponível: R$%.2f%n", getSaldo());
+        System.out.println("-----------------------------\n");
     }
 }
