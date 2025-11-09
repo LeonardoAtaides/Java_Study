@@ -23,7 +23,7 @@ public class ContaPoupanca extends Conta implements OperacoesBancarias{
 
     @Override
     public void imprimirExtrato() {
-        System.out.println("\n------ Extrato Conta Corrente ------");
+        System.out.println("\n------ Extrato Conta Poupança ------");
         System.out.println("Titular da Conta: " + getTitular());
         System.out.println("Numéro: " + getNumero());
         System.out.println("Saldo Disponível: " + getSaldo());
