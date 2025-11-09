@@ -30,7 +30,7 @@ public class BancoApp {
         }
 
         try {
-            teste2.transferir(teste2, 0);
+            teste2.transferir(teste2, 10);
         }catch (SaldoInsuficienteException e){
             System.out.println(e.getMessage());
         }
